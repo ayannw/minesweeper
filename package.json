@@ -1,6 +1,6 @@
 {
   "name": "minesweeper-board",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minesweeper board builder for node.",
   "main": "dist/index.js",
   "scripts": {
