@@ -24,11 +24,11 @@ const { Board } = require('minesweeper-board');
 import { Board } from 'minesweeper-board';
 
 const board = new Board(5, 5);    //dimension, mines
-console.log(b.getBoard());
+console.log(board.getBoard());
 ```
 
 demo 5x5 board:
-```txt
+```js
 [
   [
     Cell { hasMine: false },
