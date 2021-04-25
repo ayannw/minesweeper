@@ -1,0 +1,23 @@
+{
+  "name": "minesweeper-board",
+  "version": "1.0.0",
+  "description": "Minesweeper board builder for node.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "prettier . -w"
+  },
+  "repository": "https://github.com/ayannw/minesweeper.git",
+  "author": "ayannw",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "minesweeper",
+    "board"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.14.41"
+  }
+}
