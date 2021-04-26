@@ -3,7 +3,8 @@
     "outDir": "dist",
     "target": "ES6",
     "module": "umd",
-    "declaration": true
+    "declaration": true,
+    "removeComments": true
   },
   "include": ["src"]
 }

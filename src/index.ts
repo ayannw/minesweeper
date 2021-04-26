@@ -1,16 +1,31 @@
+/************** **************/
+
 const random = (max: number): number => {
   return Math.floor(Math.random() * max);
 };
 
+const lowerAlpha = [...'abcdefghijklmnopqrstuvwxyz'];
+
+let upperAlpha: string[] = new Array();
+
+lowerAlpha.forEach((letter) => upperAlpha.push(letter.toUpperCase()));
+const allpha = `${upperAlpha.join()}${lowerAlpha.join()}`.split(',');
+
+/************** **************/
+
 class Cell {
   public hasMine: boolean = false;
-  
-  public constructor (v: boolean) {
+  public id: string;
+
+  public constructor(v: boolean) {
     return this;
   }
 
   public setMine(v: boolean): void {
     this.hasMine = v;
+  }
+  public setID(v: string): void {
+    this.id = v;
   }
 }
 
@@ -54,13 +69,25 @@ export class Board {
   public board: Array<Array<Cell>> = new Array();
 
   public constructor(dimension: number, mines: number) {
+    if (dimension > allpha.length)
+      throw new Error("dimension can't greater than " + String(allpha.length));
+
     for (let i = 0; i < dimension; i++) {
       let row: Array<Cell> = [];
       for (let j = 0; j < dimension; j++) {
         row.push(new Cell(false));
       }
+
       this.board.push(row);
     }
+
+    this.board.forEach((row) => {
+      const m = this.board.indexOf(row);
+      row.forEach((cell) => {
+        const n = row.indexOf(cell);
+        return cell.setID(allpha[m] + String(n));
+      });
+    });
 
     this.plantMines(dimension, mines);
   }

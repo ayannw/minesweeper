@@ -1,4 +1,4 @@
-import { Board } from './index';
+import { Board } from '../index';
 
 let b = new Board(5, 5);
 
