@@ -3,6 +3,7 @@
 A fast, lightweight Node module for generating minesweeper boards.
 
 [![install size](https://packagephobia.com/badge?p=minesweeper-board)](https://packagephobia.com/result?p=minesweeper-board)
+[![weekly downloads](https://img.shields.io/npm/dw/minesweeper-board.svg)](https://npmjs.com/package/minesweeper-board)
 
 Installation:
 
