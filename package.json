@@ -1,13 +1,16 @@
 {
   "name": "minesweeper-board",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Minesweeper board builder for node.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "yarn build",
+    "prepublish": "yarn build:prod",
+    "minify": "uglifyjs dist/*.js -o dist/*.js && uglifyjs dist/**/*.js -o dist/**/*.js",
     "build": "tsc -b",
+    "build:prod": "rm -rf dist && yarn lint && yarn build && yarn minify",
     "watch": "tsc -b -w",
-    "lint": "prettier . -w"
+    "lint": "prettier . -w",
+    "test": "node dist/tests/test"
   },
   "repository": "https://github.com/ayannw/minesweeper.git",
   "author": "ayannw",
