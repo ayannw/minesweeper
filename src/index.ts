@@ -70,7 +70,7 @@ export class Board {
 
   public constructor(dimension: number, mines: number) {
     if (dimension > allpha.length)
-      throw new Error("dimension can't greater than " + String(allpha.length));
+      throw new Error("dimension can't be greater than " + String(allpha.length));
 
     for (let i = 0; i < dimension; i++) {
       let row: Array<Cell> = [];
