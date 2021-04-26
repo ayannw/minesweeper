@@ -1,11 +1,13 @@
-//@ts-nocheck
-
 const random = (max: number): number => {
   return Math.floor(Math.random() * max);
 };
 
 class Cell {
   public hasMine: boolean = false;
+  
+  public constructor (v: boolean) {
+    return this;
+  }
 
   public setMine(v: boolean): void {
     this.hasMine = v;
@@ -51,7 +53,7 @@ export class Board {
 
   public board: Array<Array<Cell>> = new Array();
 
-  public constructor(dimension: number, mines: number): void {
+  public constructor(dimension: number, mines: number) {
     for (let i = 0; i < dimension; i++) {
       let row: Array<Cell> = [];
       for (let j = 0; j < dimension; j++) {

@@ -2,10 +2,10 @@
 
 A fast, lightweight Node module for generating minesweeper boards.
 
-
 [![install size](https://packagephobia.com/badge?p=minesweeper-board)](https://packagephobia.com/result?p=minesweeper-board)
 
 Installation:
+
 ```bash
 npm i minesweeper-board
 
@@ -23,11 +23,12 @@ const { Board } = require('minesweeper-board');
 //mjs:
 import { Board } from 'minesweeper-board';
 
-const board = new Board(5, 5);    //dimension, mines
+const board = new Board(5, 5); //dimension, mines
 console.log(board.getBoard());
 ```
 
 demo 5x5 board:
+
 ```js
 [
   [
@@ -68,4 +69,4 @@ demo 5x5 board:
 ]
 ```
 
-> `hasMine`: indicates if the cell has a mine or not.
+ - `hasMine`: indicates if the cell has a mine or not.
