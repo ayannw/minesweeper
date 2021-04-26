@@ -13,7 +13,7 @@ class Cell {
 }
 
 export class Board {
-  public getBoard(): Board {
+  public getBoard(): Array<Array<Cell>> {
     return this.board;
   }
 
